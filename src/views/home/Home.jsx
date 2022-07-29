@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Button } from 'antd'
-import { firebaseApp } from '../../config/firebase/firebase'
+import firebaseApp from '../../config/firebase/firebase'
 import { getAuth, signOut } from 'firebase/auth'
 
 const auth = getAuth(firebaseApp);

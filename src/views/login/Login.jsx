@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Form, Input, Button, Checkbox, Row, Col } from 'antd'
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import { Modall } from '../../components/modal/Modall'
-import { firebaseApp } from '../../config/firebase/firebase';
+import firebaseApp from '../../config/firebase/firebase';
 import { getAuth, signOut } from 'firebase/auth';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 
@@ -45,14 +45,14 @@ export const Login = () => {
             },
           ]}
         >
-          <Input prefix={<UserOutlined className='site-form-item-icon' placeholder='username' />} />
+          <Input className='item' prefix={<UserOutlined className='site-form-item-icon ' placeholder='username' />} />
         </Form.Item>
 
         <Form.Item
           name='password'
           rules={[{ required: true, message: 'Please input your password!' }]}
         >
-          <Input prefix={<LockOutlined className='site-form-item-icon' type='password' placeholder='password' />} />
+          <Input className='item' prefix={<LockOutlined className='site-form-item-icon' type='password' placeholder='password' />} />
         </Form.Item>
 
         <Form.Item>

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import { Public } from './layout/public/Public';
 import { Private } from './layout/private/Private';
-import { firebaseApp } from '../config/firebase/firebase'
+import firebaseApp from '../config/firebase/firebase'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 
 const auth = getAuth(firebaseApp)
